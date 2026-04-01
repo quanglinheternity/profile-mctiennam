@@ -65,13 +65,14 @@
                         <div class="dropdown-menu m-0">
                             <a href="team.html" class="dropdown-item">Sự Kiện Nổi Bật</a>
                             <a href="testimonial.html" class="dropdown-item">Đối Tác Nói Gì</a>
-                            <a href="404.html" class="dropdown-item">Trang 404</a>
+                            <!-- <a href="404.html" class="dropdown-item">Trang 404</a> -->
                         </div>
                     </div>
                     <a href="contact.html" class="nav-item nav-link active">Liên Hệ</a>
                 </div>
                 <div class="d-none d-lg-flex">
-                    <a class="btn btn-outline-primary border-2" href="#!">Đặt Lịch Ngay</a>
+                    <a class="btn btn-outline-primary border-2" href="#" data-bs-toggle="modal"
+                        data-bs-target="#bookingModal">Đặt Lịch Ngay</a>
                 </div>
             </div>
         </nav>
@@ -102,11 +103,12 @@
                             <h1>Vui Lòng Liên Hệ</h1>
                         </div>
                     </div>
-                    <h4 class="lh-base mb-4">Để lại thông tin và chúng tôi sẽ phản hồi bạn trong thời gian sớm nhất để tư vấn kịch bản và sự kiện chi tiết.</h4>
+                    <h4 class="lh-base mb-4">Để lại thông tin và chúng tôi sẽ phản hồi bạn trong thời gian sớm nhất để
+                        tư vấn kịch bản và sự kiện chi tiết.</h4>
                     <table class="table table-dark mb-0 wow fadeInUp" data-wow-delay="0.3s">
                         <tr>
                             <td>ĐIỆN THOẠI</td>
-                            <td>+84 123 456 789</td>
+                            <td>0989 832 923</td>
                         </tr>
                         <tr>
                             <td>E-MAIL</td>
@@ -119,10 +121,11 @@
                         <tr class="border-dark">
                             <td>THEO DÕI</td>
                             <td>
-                                <a class="me-1" href="#!"><i class="fab fa-x-twitter"></i></a>
-                                <a class="me-1" href="#!"><i class="fab fa-facebook-f"></i></a>
-                                <a class="me-1" href="#!"><i class="fab fa-youtube"></i></a>
-                                <a class="me-1" href="#!"><i class="fab fa-linkedin-in"></i></a>
+                                <a class="me-1 text-white" target="_blank"
+                                    href="https://www.facebook.com/tiennam.nguyen.1213"><i
+                                        class="fab fa-facebook-f"></i></a>
+                                <a class="me-1 text-white" target="_blank" href="https://www.youtube.com/@mctiennam"><i
+                                        class="fab fa-youtube"></i></a>
                             </td>
                         </tr>
                     </table>
@@ -153,14 +156,14 @@
                             </div>
                             <div class="col-12">
                                 <div class="form-floating">
-                                    <textarea class="form-control bg-secondary border-0"
-                                        placeholder="Lời nhắn của bạn" id="message"
-                                        style="height: 150px"></textarea>
+                                    <textarea class="form-control bg-secondary border-0" placeholder="Lời nhắn của bạn"
+                                        id="message" style="height: 150px"></textarea>
                                     <label for="message">Lời nhắn</label>
                                 </div>
                             </div>
                             <div class="col-12">
-                                <button class="btn btn-outline-primary border-2 w-100 py-3" type="submit">Gửi Lời Nhắn</button>
+                                <button class="btn btn-outline-primary border-2 w-100 py-3" type="submit">Gửi Lời
+                                    Nhắn</button>
                             </div>
                         </div>
                     </form>
@@ -185,18 +188,14 @@
     <div class="container-fluid bg-dark text-light footer py-5 wow fadeIn" data-wow-delay="0.1s">
         <div class="container text-center py-5">
             <a href="index.html">
-                <h1 class="display-4 mb-3 text-white text-uppercase"><i
-                        class="fa-solid fa-microphone me-1"></i>MC Tiến Nam</h1>
+                <h1 class="display-4 mb-3 text-white text-uppercase"><i class="fa-solid fa-microphone me-1"></i>MC Tiến
+                    Nam</h1>
             </a>
             <div class="d-flex justify-content-center mb-4">
-                <a class="btn btn-lg-square btn-outline-primary border-2 m-1" href="#!"><i
-                        class="fab fa-x-twitter"></i></a>
-                <a class="btn btn-lg-square btn-outline-primary border-2 m-1" href="#!"><i
-                        class="fab fa-facebook-f"></i></a>
-                <a class="btn btn-lg-square btn-outline-primary border-2 m-1" href="#!"><i
-                        class="fab fa-youtube"></i></a>
-                <a class="btn btn-lg-square btn-outline-primary border-2 m-1" href="#!"><i
-                        class="fab fa-linkedin-in"></i></a>
+                <a class="btn btn-lg-square btn-outline-primary border-2 m-1" target="_blank"
+                    href="https://www.facebook.com/tiennam.nguyen.1213"><i class="fab fa-facebook-f"></i></a>
+                <a class="btn btn-lg-square btn-outline-primary border-2 m-1" target="_blank"
+                    href="https://www.youtube.com/@mctiennam"><i class="fab fa-youtube"></i></a>
             </div>
             <p>&copy; <a class="border-bottom" href="#">MC Tiến Nam</a>. Đã đăng ký bản quyền.</p>
 
@@ -209,7 +208,41 @@
     <!-- Footer End -->
 
 
+
+    <!-- Booking Modal -->
+    <div class="modal fade" id="bookingModal" tabindex="-1" aria-labelledby="bookingModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content bg-dark text-white border-primary">
+                <div class="modal-header border-0">
+                    <h5 class="modal-title text-primary text-uppercase" id="bookingModalLabel">Thông Tin Liên Hệ</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p class="mb-4">Vui lòng liên hệ qua các kênh dưới đây để nhận tư vấn kịch bản và báo giá chi tiết,
+                        hoặc truy cập trang <strong>Liên Hệ</strong> để để lại lời nhắn.</p>
+                    <ul class="list-unstyled mb-0 ms-3 lh-lg">
+                        <li><i class="fa fa-phone-alt text-primary me-3"></i><a class="text-white text-decoration-none"
+                                href="tel:0989832923">0989 832 923 (Zalo/Viber)</a></li>
+                        <li><i class="fa fa-envelope text-primary me-3"></i><a class="text-white text-decoration-none"
+                                href="mailto:lienhe@mctiennam.com">lienhe@mctiennam.com</a></li>
+                        <li><i class="fab fa-facebook-f text-primary me-3"></i><a
+                                class="text-white text-decoration-none" target="_blank"
+                                href="https://www.facebook.com/tiennam.nguyen.1213">Facebook Tiến Nam</a></li>
+                        <li><i class="fab fa-youtube text-primary me-3"></i><a class="text-white text-decoration-none"
+                                target="_blank" href="https://www.youtube.com/@mctiennam">YouTube Tiến Nam</a></li>
+                    </ul>
+                </div>
+                <div class="modal-footer border-0">
+                    <button type="button" class="btn btn-secondary border-2" data-bs-dismiss="modal">Đóng</button>
+                    <a href="contact.html" class="btn btn-primary border-2">Đến Trang Liên Hệ</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Back to Top -->
+
     <a href="#" class="btn btn-outline-primary border-2 btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
 
 
