@@ -1,5 +1,153 @@
 /********** Template CSS **********/
 
+:root {
+    --bs-primary: #D4AF37;
+    --bs-primary-rgb: 212, 175, 55;
+    --bs-secondary: #1A1A1A;
+    --bs-secondary-rgb: 26, 26, 26;
+    --bs-dark: #0A0A0A;
+    --bs-dark-rgb: 10, 10, 10;
+    --bs-light: #F8F9FA;
+    --bs-body-bg: #0F0F0F;
+    --bs-body-color: #E0E0E0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.display-1,
+.display-2,
+.display-3,
+.display-4,
+.display-5,
+.display-6,
+.navbar-brand {
+    font-family: 'Playfair Display', serif !important;
+}
+
+body {
+    font-family: 'Inter', sans-serif !important;
+    background-color: var(--bs-body-bg);
+    color: var(--bs-body-color);
+}
+
+/* Color Overrides */
+.text-primary {
+    color: var(--bs-primary) !important;
+}
+
+.bg-secondary {
+    background-color: var(--bs-secondary) !important;
+}
+
+.bg-dark {
+    background-color: var(--bs-dark) !important;
+}
+
+.text-dark {
+    color: var(--bs-dark) !important;
+}
+
+/* Buttons */
+.btn-primary {
+    background-color: var(--bs-primary) !important;
+    border-color: var(--bs-primary) !important;
+    color: #000 !important;
+}
+
+.btn-primary:hover {
+    background-color: #c09e32 !important;
+    border-color: #c09e32 !important;
+    color: #000 !important;
+    box-shadow: 0 0 15px rgba(212, 175, 55, 0.4);
+}
+
+.btn-outline-primary {
+    color: var(--bs-primary) !important;
+    border-color: var(--bs-primary) !important;
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--bs-primary) !important;
+    color: #000 !important;
+    box-shadow: 0 0 15px rgba(212, 175, 55, 0.4);
+}
+
+/* Glassmorphism Classes */
+.glass {
+    background: rgba(26, 26, 26, 0.6) !important;
+    backdrop-filter: blur(12px) !important;
+    -webkit-backdrop-filter: blur(12px) !important;
+    border: 1px solid rgba(212, 175, 55, 0.15) !important;
+    border-radius: 12px;
+}
+
+/* Hover Luxury */
+.hover-luxury {
+    transition: all 0.4s ease;
+}
+
+.hover-luxury:hover {
+    transform: scale(1.03) translateY(-5px);
+    box-shadow: 0 10px 30px rgba(212, 175, 55, 0.15);
+}
+
+/* Mobile Optimization */
+@media (max-width: 768px) {
+    .display-1 {
+        font-size: 3rem !important;
+    }
+
+    .display-4 {
+        font-size: 2rem !important;
+    }
+
+    h1 {
+        font-size: 1.8rem !important;
+    }
+
+    h5 {
+        font-size: 1rem !important;
+    }
+
+    p,
+    .fs-5 {
+        font-size: 0.95rem !important;
+    }
+
+    .btn {
+        padding: 0.6rem 1.5rem !important;
+    }
+
+    .carousel-caption {
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+    }
+
+    .carousel-item img {
+        height: 100vh;
+        object-fit: cover;
+    }
+
+    .carousel-caption .title {
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    .masonry-item {
+        margin-bottom: 1rem;
+    }
+
+    .btn-lg-square {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+
 .back-to-top {
     position: fixed;
     display: none;
@@ -171,7 +319,7 @@
 
 .page-header {
     padding-top: 200px;
-    background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url(../img/carousel-1.jpg) top center no-repeat;
+    background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url(../img/carousel-1.jpg) top center no-repeat;
     background-size: cover;
 }
 
@@ -407,4 +555,46 @@
     background-position: 0px 0px;
     background-repeat: repeat-x;
     animation: footerAnimatedBg 50s linear infinite;
+}
+
+/* Masonry Grid */
+.masonry-container {
+    column-count: 4;
+    column-gap: 1.5rem;
+}
+
+@media (max-width: 1200px) {
+    .masonry-container {
+        column-count: 3;
+    }
+}
+
+@media (max-width: 992px) {
+    .masonry-container {
+        column-count: 2;
+    }
+}
+
+@media (max-width: 576px) {
+    .masonry-container {
+        column-count: 1;
+    }
+}
+
+.masonry-item {
+    break-inside: avoid;
+    margin-bottom: 1.5rem;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--bs-primary);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bs-dark);
 }
