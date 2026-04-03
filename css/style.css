@@ -507,10 +507,25 @@ body {
 
 .testimonial-carousel .owl-dots {
     margin-top: 35px;
-    height: 100px;
+    height: auto;
+    min-height: 100px;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
+    gap: 15px 0;
+}
+
+@media (max-width: 768px) {
+    .testimonial-carousel .owl-dots .owl-dot {
+        width: 50px !important;
+        height: 50px !important;
+        padding: 5px !important;
+    }
+    .testimonial-carousel .owl-dots .owl-dot.active {
+        width: 70px !important;
+        height: 70px !important;
+    }
 }
 
 .testimonial-carousel .owl-dots .owl-dot {
